@@ -1,6 +1,13 @@
 import Slider from "@react-native-community/slider"
 import React, { useState } from "react"
-import { Image, Modal, StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import {
+  Image,
+  Modal,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native"
 import { ModalPassword } from "../../components/modal"
 
 let charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*#"
@@ -42,7 +49,10 @@ export function Home() {
       </TouchableOpacity>
 
       <Modal visible={modalVisible} animationType="fade" transparent={true}>
-        <ModalPassword password={passwordValue} handleClose={() => setModalVisible(false)}/>
+        <ModalPassword
+          password={passwordValue}
+          handleClose={() => setModalVisible(false)}
+        />
       </Modal>
     </View>
   )

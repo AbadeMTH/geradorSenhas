@@ -31,7 +31,7 @@ const useStorage = () => {
 
       await AsyncStorage.setItem(key, JSON.stringify(myPasswords))
 
-      return myPasswords;
+      return myPasswords
     } catch (error) {
       console.error("Error removing data", error)
     }
